@@ -1,0 +1,19 @@
+    <%- include ('../includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include ('../includes/navigation.ejs') %>
+    <div class="addProduct-div">
+        <form class="addProduct-form" action="/admin/addProduct" method="POST">
+            <label class="addProduct-label" for="title">Title</label>
+                <input class="addProduct-input" type="text" name="title" id="title" placeholder="Enter Product Title"/><br>
+            <label class="addProduct-label" for="imageURL">Image URL</label>
+                <input class="addProduct-input" type="text" name="imageURL" id="imageURL" placeholder="Enter Product Image URL"/><br>
+            <label class="addProduct-label" for="description">Description</label>
+                <input class="addProduct-input" type="text" name="description" id="description" placeholder="Enter Product Description"/><br>
+            <label class="addProduct-label" for="price">Price</label>
+                <input class="addProduct-input" type="price" name="price" id="price" placeholder="Enter Product Price"/><br>
+            <button class="addProduct-button" type="submit">Add Product</button>
+        </form>
+    </div>
+<%- include ('../includes/end.ejs') %>

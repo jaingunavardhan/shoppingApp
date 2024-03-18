@@ -1,0 +1,63 @@
+.nav-bar-header{
+    background-color: yellow;
+    width: 100%;
+    margin: 0;
+    padding: 3px;
+}
+
+.nav-bar-list{
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.nav-bar-item a{
+    padding: 10px;
+    font-weight: bold;
+    color: brown;
+}
+.nav-bar-item a:hover,
+.nav-bar-item a:active{
+    color: blue;
+    cursor: pointer;
+}
+
+.addProduct-div{
+    text-align: center;
+}
+
+label{
+    color: blue;
+}
+input{
+    margin: 5px;
+    color: green;
+}
+
+button{
+    color: blue;
+    border-color: blue;
+    border-radius: 5px;
+    margin: 3px;
+    padding: 4px;
+}
+button:hover,
+button:active{
+    color: white;
+    background-color: blue;
+}
+button a:hover,
+button a:active{
+    color: white;
+    background-color: blue;
+}
+
+h1{
+    color: red;
+    text-align: center;
+}
+
+div{
+    text-align: center;
+    margin: 20px;
+}

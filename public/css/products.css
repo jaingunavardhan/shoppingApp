@@ -1,0 +1,25 @@
+
+.products-h1{
+    color: blue;
+    text-align: center;
+}
+
+.products-list{
+    color: green;
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+}
+
+.products-list-item-inside{
+    margin-top: 3px;
+}
+
+.products-list-item-inside h2{
+    color: blue;
+}
+
+img{
+    width: 100px;
+    height: 75px;
+}
