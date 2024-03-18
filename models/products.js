@@ -1,8 +1,9 @@
+//In this, we define how the data is handled for PRODUCTS view
 const fs = require('fs');
 const path = require('path');
 
+//File path to store the file created. Conventionally we store these files in data folder
 const productspath = path.join(__dirname, 'data', 'products.json');
-const cartpath = path.join(__dirname, 'data', 'cart.json');
 
 function read()
 {
@@ -18,6 +19,7 @@ function write(data)
     fs.writeFileSync( productspath, JSON.stringify(data) );
 }
 
+//Exporting Products class to be able to be accessible by Controller
 module.exports = class Products{
     constructor(id, title, imageURL, desc, price)
     {

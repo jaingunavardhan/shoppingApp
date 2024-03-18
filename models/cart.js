@@ -1,9 +1,12 @@
+//In this, we define how the data is handled for CART view
 const fs = require('fs');
 const path = require('path')
 const Products = require('./products.js')
 
+//File path to store the file created. Conventionally we store these files in data folder
 const cartpath = path.join(__dirname, 'data', 'cart.json');
 
+//Exporting Cart class to be able to be accessible by Controller
 module.exports = class Cart{
     static addToCart(productId, callback)
     {

@@ -1,5 +1,7 @@
+//This Controller uses the CART model to renser the data onto views of cart
 const Cart = require('../models/cart.js');
 
+//Exporting the function to the routes which imports it.
 exports.addToCart = (request, response, next)=>{
     console.log("Add Cart...")
     Cart.addToCart(request.body.productId, ()=>{

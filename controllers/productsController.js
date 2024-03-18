@@ -1,6 +1,7 @@
-//const bodyParser = require('body-parser');
+//This Controller uses the PRODUCT model to renser the data onto views of PRODUCTS
 const Products = require('../models/products.js');
 
+//Exporting the function to the routes which imports it.
 exports.page404 = (request, response, next)=>{
     console.log("404 ...")
     response.status(404).render('page404',{
@@ -25,6 +26,8 @@ exports.postContactusPage = (request, response, next)=>{
 exports.getAdminProducts = (request, response, next)=>{
     console.log("Get Admin Products...")
     const productsList = Products.fetchAll();
+    //Rendering the ejs file and passing the data to the ejs file so that it can handle how to display.
+    //Refer .ejs (Templating Engines) to get more understanding of how the data is handled in .ejs views
     response.render( './admin/adminProducts', {
         pageTitle : "Products Page",
         productsList : productsList
