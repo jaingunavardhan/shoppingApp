@@ -1,0 +1,15 @@
+    <%- include('./includes/head.ejs') %>
+</head>
+
+<body>
+    <%- include('./includes/navigation.ejs') %>
+    <div>
+        <form class="contactus-form" action="/contactSuccess" method="POST">
+            <label for="name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Name"><br>
+            <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="Enter Email ID"><br>
+            <button type="submit">Submit</button>            
+        </form>
+    </div>
+<%- include('./includes/end.ejs') %>
