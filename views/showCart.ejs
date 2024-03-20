@@ -16,7 +16,7 @@
                     <p class="products-list-item-inside"><img src=<%= product.imageURL %> alt="imageURL"></p>
                     <p class="products-list-item-inside"> <%= product.description %> </p>
                     <h3 class="products-list-item-inside">Price: <%= product.price %></h3>
-                    <h3 class="products-list-item-inside">Quantity: <%= product.qty %></h3>
+                    <h3 class="products-list-item-inside">Quantity: <%= product.cartItem.quantity %></h3>
                     <button type="button"><a href='/showProduct/<%=product.id%>'>Get Details</a></button>
                     <form action="/deleteFromCart" method="POST">
                         <input type="hidden" name="productId" value=<%=product.id%>>

@@ -9,6 +9,9 @@ const adminRoutes = require('./routes/adminRouter.js');
 const sequelize = require('./util/database.js');
 const Product = require('./models/product.js');
 const User = require('./models/user.js');
+const Cart = require('./models/cart.js');
+const CartItem = require('./models/cartItem.js');
+
 
 //Creating an express server
 const app = express();
@@ -40,6 +43,11 @@ app.use(shopRoutes);
 
 Product.belongsTo(User, {constraints:true, onDelete: 'CASCADE'});
 User.hasMany(Product);
+Cart.belongsTo(User, {constraints:true, onDelete:'CASCADE'});
+User.hasOne(Cart);
+Product.belongsToMany(Cart, {through: CartItem});
+Cart.belongsToMany(Product, {through: CartItem});
+
 //Synchronizing our node_db database with the created instance
 //It returns a promise
 sequelize.sync()
@@ -52,6 +60,14 @@ sequelize.sync()
         return user;
     })
     .then( (user)=>{
+        user.getCart()
+            .then(cart=>{
+                if(!cart)
+                    return user.createCart()
+                return cart;
+            })
+    })
+    .then((cart)=>{
         //The RESULT would contain the SQL statement executed & other metadata
         //console.log(result);
         //If sync with database is success,

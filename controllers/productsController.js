@@ -44,7 +44,7 @@ exports.showProducts = (request, response, next)=>{
     //We destructure the result of the promise into rowsData(a list of rows) & metaData(we don't use)
     Product.findAll()
         .then( (products)=>{ //products-> contans an array of rows of the Table
-            console.log(products)
+            console.log("Showing Products...", products)
             response.render( 'shop', {
                 pageTitle : "Home Page",
                 productsList : products

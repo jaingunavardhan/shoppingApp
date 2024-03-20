@@ -5,7 +5,6 @@
 }
 
 .products-list{
-    color: green;
     text-decoration: none;
     list-style: none;
     display: flex;
@@ -13,6 +12,7 @@
 
 .products-list-item-inside{
     margin-top: 3px;
+    color: green
 }
 
 .products-list-item-inside h2{
